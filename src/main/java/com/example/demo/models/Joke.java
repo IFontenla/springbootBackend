@@ -17,6 +17,22 @@ public class Joke {
     
     @Column(nullable = false)
     String text;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getText() {
+        return text;
+    }
+
+    public void setText(String text) {
+        this.text = text;
+    }
 }
 
 //Create table joke (id long primary key auto_increment, varchar(200) not null)
