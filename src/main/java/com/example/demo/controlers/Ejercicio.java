@@ -116,7 +116,7 @@ public class Ejercicio {
 
     @PostMapping("/insertarChiste")
     public String addJoke(@RequestParam Map<String, String> body) {
-        String jokeText = body.get("text")
+        String jokeText = body.get("text");
         Joke joke = new Joke();
         joke.setText(jokeText);
         jokeService.saveJoke(joke);
