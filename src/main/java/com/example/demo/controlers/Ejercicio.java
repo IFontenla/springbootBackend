@@ -102,4 +102,10 @@ public class Ejercicio {
         }
         return web;
     }
+
+    @PostMapping("/chiste")
+    public String addJoke(@RequestParam String text) {
+        
+        return "";
+    }
 }
