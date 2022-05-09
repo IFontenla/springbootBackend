@@ -111,10 +111,15 @@ public class Ejercicio {
     @GetMapping("/listarChistes")
     public String jokeList() {
         ArrayList<Joke> jokes = jokeService.getAllJoke();
-        return jokes.toString();
+        String listado = "";
+        for(Joke joke : jokes) {
+            listado += joke.getText();
+            listado += "<br/>";
+        }
+        return listado;
     }
 
-    @PostMapping("/insertarChiste")
+    @PostMapping("/insertarchiste")
     public String addJoke(@RequestParam Map<String, String> body) {
         String jokeText = body.get("text");
         Joke joke = new Joke();
